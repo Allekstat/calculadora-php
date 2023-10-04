@@ -31,8 +31,7 @@
 																	} ?>'>
 			</div>
 			<div id='saida'>
-				<span>resultado -> <?php
-									if (isset($_GET['op']) and isset($_GET['x']) and isset($_GET['y'])) {
+				<span>resultado -> <?php if (isset($_GET['op']) and isset($_GET['x']) and isset($_GET['y'])) {
 										$x = (float)$_GET['x'];
 										$y = (float)$_GET['y'];
 										$o = (float)$_GET['op'];
@@ -47,15 +46,14 @@
 												echo $x * $y;
 												break;
 											case 4:
-												if $y == 0 {
+												if ($y == 0) {
 													echo 'Infinity';
 												}
 												echo $x / $y;
 												break;
 											default:;
 										}
-									}
-									?></span> <!-- <output name='res' for='numero_x numero_y'></output> -->
+									} ?></span> <!-- <output name='res' for='numero_x numero_y'></output> -->
 			</div>
 		</div>
 		<div id='botoes'>
